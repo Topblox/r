@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirector</title>
+    <script>
+        window.onload = function() {
+            // Get the part after the hash (#)
+            const urlFragment = window.location.hash.substring(1);
+            
+            // If the fragment exists, redirect to it
+            if (urlFragment) {
+                window.location.href = urlFragment;
+            } else {
+                document.getElementById("message").innerText = "No URL provided!";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p id="message">Please wait while we redirect you.</p>
+</body>
+</html>
